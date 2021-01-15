@@ -1,0 +1,12 @@
+version: "3"
+services:
+  floating-dusk:
+    image: georgemihail/floating-dusk
+    ports:
+      - 3001:3001
+    container_name: floatingdusk
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    container_name: watchtower
